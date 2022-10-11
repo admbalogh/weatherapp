@@ -5,8 +5,8 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Weather />
-      <p>
+      <Weather defaultCity="London" />
+      <footer>
         Created by{" "}
         <a
           href="https://adambalogh.netlify.app/about.htmlproject is"
@@ -26,7 +26,7 @@ function App() {
           {" "}
           GitHub
         </a>
-      </p>
+      </footer>
     </div>
   );
 }
