@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import WeatherForecastDay from "./WeatherForecastDay";
 import "./WeatherForecast.css";
 import axios from "axios";
@@ -6,7 +6,12 @@ import axios from "axios";
 function WeatherForecast(props) {
   let [loaded, setLoaded] = useState(false);
   let [forecast, seForecast] = useState(null);
+  //If the coordinates are changing than execute the useEffect function
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.coordinates]);
 
+  // Locating through API the city and forecasting the weather conditions
   function handleResponse(response) {
     seForecast(response.data.daily);
     setLoaded(true);
@@ -15,9 +20,15 @@ function WeatherForecast(props) {
     return (
       <div className="WeatherForecast">
         <div className="row">
-          <div className="col">
-            <WeatherForecastDay data={forecast[0]} />
-          </div>
+          {forecast.map(function (dailyForecast, index) {
+            if (index < 7) {
+              return (
+                <div className="col" key={index}>
+                  <WeatherForecastDay data={dailyForecast} />
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     );

@@ -2,16 +2,17 @@ import React from "react";
 import WeatherIcon from "./WeatherIcon";
 
 function WeatherForecastDay(props) {
+  //Rendering the max temperature
   function maxTemperature() {
     let temperature = Math.round(props.data.temp.max);
     return `${temperature}º`;
   }
-
+  //Rendering the min temperature
   function minTemperature() {
     let temperature = Math.round(props.data.temp.min);
     return `${temperature}º`;
   }
-
+  // Rendering the current day
   function day() {
     let date = new Date(props.data.dt * 1000);
     let day = date.getDay();
@@ -20,7 +21,7 @@ function WeatherForecastDay(props) {
 
     return days[day];
   }
-
+  // Returning back from functions the accurate datas
   return (
     <div>
       <div className="WeatherForecast-day">{day()}</div>
