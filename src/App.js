@@ -5,6 +5,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
+      <h2>React⚛️ Weather App</h2>
       <Weather defaultCity="London" />
       <footer>
         Created by{" "}

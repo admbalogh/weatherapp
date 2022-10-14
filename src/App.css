@@ -8,8 +8,11 @@
   margin: 60px auto;
   max-width: 800px;
 }
-
+.App h2 {
+  text-align: center;
+}
 .App footer {
+  text-align: center;
   font-size: 11px;
   margin: 10px 0;
 }
