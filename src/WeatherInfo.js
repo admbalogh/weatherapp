@@ -14,18 +14,17 @@ function WeatherInfo(props) {
         </li>
         <li className="text-capitalize ">{props.data.description}</li>
       </ul>
-      <div className="row mt-3">
+      <div className="row mt-3 mb-4">
         <div className="col-6">
-          <WeatherIcon code={props.data.icon} size={60} />
-
+          <WeatherIcon code={props.data.icon} size={52} />
           <span className="temperature">
             <WeatherTemperature celsius={props.data.temperature} />
           </span>
         </div>
         <div className="col-6">
           <ul>
-            <li>Humidity:{Math.round(props.data.humidity)}%</li>
-            <li>Wind:{Math.round(props.data.wind)}km/h</li>
+            <li>Humidity: {Math.round(props.data.humidity)}%</li>
+            <li>Wind: {Math.round(props.data.wind)}km/h</li>
           </ul>
         </div>
       </div>

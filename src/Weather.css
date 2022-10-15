@@ -8,19 +8,17 @@
   color: rgb(90, 89, 89);
 }
 .btn-control {
-  color: mintcream;
-  background-color: rgb(0, 110, 255);
-  border-color: #26b7f05e;
-  font-size: 14px;
-  padding: 8px 20px;
-  border-radius: 30px;
-  font-weight: 400;
+  color: white;
+  background-color: rgb(65, 147, 255);
+  border: 1px solid black;
+  font-size: 12px;
+  padding: 8px 25px;
+  border-radius: 18px;
 }
 .btn-control:hover {
-  background-color: rgba(0, 17, 255, 0.822);
-  transition: ease-in-out 350ms;
-  cursor: default;
-  border-color: rgba(113, 203, 255, 0.781);
+  background-color: rgb(19, 121, 255);
+  transition: ease-in-out 250ms;
+  cursor: pointer;
 }
 
 .weather h1 {
