@@ -9,7 +9,7 @@ function App() {
       <footer>
         Created by{" "}
         <a
-          href="https://adambalogh.netlify.app/about.htmlproject is"
+          href="https://adambalogh.netlify.app/about.html"
           className="link"
           target="_blank"
           rel="noreferrer"
